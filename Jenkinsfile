@@ -17,8 +17,8 @@ pipeline{
         stage('Deploy to Ngnix') {
             steps {
                 sh '''
-                    sudo rm -rf $NGNIX_FOLDER/*
-                    sudo cp -r dist/* $NGNIX_FOLDER/ 
+                    rm -rf $NGNIX_FOLDER/*
+                    cp -r dist/* $NGNIX_FOLDER/ 
                 '''
             }
         }
